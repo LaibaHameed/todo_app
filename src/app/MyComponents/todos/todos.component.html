@@ -1,0 +1,6 @@
+<div *ngFor="let todo of todos" class="text-center">
+    <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-item>
+</div>
+
+
+<!--  {{todo.sno}} - {{todo.title}} - {{todo.desc}} -->
