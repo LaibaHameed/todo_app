@@ -1,0 +1,15 @@
+<h4 class="text-center mt-4" style="color:  #802392 ;">Add a Todo</h4>
+
+<form class=" g-3 needs-validation my-3" novalidate (ngSubmit)="onSubmit()">
+  <div class=" row my-3 col-4">
+    <label for="title" class="form-label text-center" >ToDo Title</label>
+    <input type="text" class="form-control" id="title" name="title" required [(ngModel)]="title">
+  </div>
+  <div class="row my-3 col-4" >
+    <label for="desc" class="form-label text-center">ToDo Description </label>
+    <input type="text" class="form-control" id="desc" name="desc" required [(ngModel)]="desc">
+  </div>
+  <div>
+    <button class="btn btn-sm my-3 btn-primary" type="submit">Add ToDo</button>
+  </div>
+</form>

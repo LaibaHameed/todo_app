@@ -1,3 +1,9 @@
-<h4 class="text-center mt-4">{{todo.title}}</h4>
-<p class="text-center">{{todo.desc}}</p>
-<button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+<h5 class="text-center mt-4" [ngClass]="{'strike': !todo.active}">{{todo.title}}</h5>
+<p class="text-center" [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+
+<div>
+  <input type="checkbox" class="form-check-input mx-2" id="check{{i}}" (click)="onCheckBoxClick(todo)" [checked]="!todo.active">
+<label for="check{{i}}" class="form-check-label">Done</label>
+</div>
+<br>
+<button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
